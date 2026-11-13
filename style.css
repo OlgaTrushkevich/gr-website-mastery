@@ -74,7 +74,6 @@ footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;pa
 .photo-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .photo-track::-webkit-scrollbar{display:none}
 .photo-track img{flex:0 0 76%;width:76%;height:clamp(15rem,41vw,36rem);object-fit:cover;scroll-snap-align:start;background:#302c25}
-@media(max-width:42rem){.photo-track img{flex-basis:100%;width:100%}}
 .founder{width:min(100%,26rem);margin-bottom:2rem}
 .tabs{display:flex;gap:1rem;border-bottom:1px solid #d7d2c6;margin-bottom:1.5rem}
 .tabs a{padding:.5rem;text-decoration:none}
@@ -85,8 +84,6 @@ label{display:grid;gap:.25rem;font-weight:600}
 input,select,textarea{width:100%;border:1px solid #aca698;padding:.6rem .7rem;font:inherit;background:white;color:inherit}
 form button{justify-self:start}
 @media(max-width:62rem){.opinions,.clients{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:42rem){.header-inner{align-items:flex-start;flex-direction:column;gap:.5rem;padding-block:.5rem 1rem}nav{gap:.4rem 1rem}.opinions,.clients,.team,.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:26rem){.team,.footer-grid{grid-template-columns:1fr}.wrap{width:calc(100% - 2rem)}}
 
 address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 .footer-grid address{font-size:1rem;color:#e2d3b2}
@@ -124,4 +121,40 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
   min-height:0;
   font-size:1.12rem;
   line-height:1.2;
+}
+
+@media (max-width: 54rem) {
+  .header-inner{flex-direction:column;gap:.5rem;min-height:0;padding-block:.75rem}
+  .header-inner .brand{width:12rem}
+  .header-inner nav{justify-content:center;gap:.15rem .75rem}
+  .header-inner nav a{display:flex;align-items:center;min-height:44px;font-size:1.15rem}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid > div{min-width:0}
+}
+
+@media (max-width: 42rem) {
+  .wrap{width:calc(100% - 2rem)}
+  .hero-inner{padding-block:3.5rem}
+  .hero h1{font-size:clamp(2.75rem,11vw,4.5rem)}
+  .intro,.section,.page{padding-block:2.75rem}
+  h1{font-size:clamp(2.5rem,8.5vw,3.5rem)}
+  h2{font-size:clamp(2.25rem,7.5vw,3rem)}
+  h1,h2,h3{overflow-wrap:anywhere}
+  .prose{font-size:1.0625rem}
+  .photo-track img{flex-basis:100%;width:100%;height:clamp(15rem,70vw,26rem)}
+  .opinions,.clients,.team{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .opinions article,.team article{padding:1rem}
+  .faq summary::after{margin-inline-end:.5rem}
+  .page-back-row{padding-block:1rem .25rem}
+  .page-back-row .page-back{margin-inline-start:0}
+  .footer-contacts summary{display:flex;align-items:center;min-height:44px}
+  .footer-grid>div>a:not(.brand){min-height:44px;align-content:center}
+  .socials{flex-wrap:wrap}
+  .socials a,.socials span{width:44px;height:44px}
+  form{grid-template-columns:minmax(0,1fr)}
+  input,select,textarea{min-height:44px;font-size:1rem}
+}
+
+@media (max-width: 26rem) {
+  .opinions,.team,.footer-grid{grid-template-columns:1fr}
 }
