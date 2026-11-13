@@ -28,16 +28,20 @@
     .event-booking-toggle > .event-booking { margin-top: 1.5rem; }
     .upcoming-event { margin-top: 1.5rem; }
     .upcoming-event p { margin-bottom: 0; }
+    .event-card h2.page-opening-title { font-size: clamp(2.17rem, 5.25vw, 4.9rem); }
+    @media (max-width: 42rem) {
+      .event-card h2.page-opening-title { font-size: clamp(1.75rem, 5.95vw, 2.45rem); }
+    }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><div class="header-inner wrap"><a href="index.html" class="brand"><img src="assets/logo.png" width="363" height="127" alt="MASTERY. Performance by Peace"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="advisory.html">Services</a><a href="insights.html">Insights</a><a href="events.html" aria-current="page">New Events</a></nav></div></header>
-  <div class="page-back-row wrap"><a class="page-back" href="index.html" aria-label="Back"></a></div>
-  <main id="main"><article class="page wrap">
-<h1>New Events</h1>
+  <div class="page-back-row wrap page-opening-back"><a class="page-back" href="index.html" aria-label="Back"></a></div>
+  <main id="main"><article class="page wrap page-opening">
+<h1 class="page-opening-label">New Events</h1>
 <section class="event-card" aria-labelledby="mallorca-retreat">
-<h2 id="mallorca-retreat">The 2027 Mastery Retreat - Mallorca, Spain</h2>
+<h2 id="mallorca-retreat" class="page-opening-title">The 2027 Mastery Retreat - Mallorca, Spain</h2>
 <div class="prose">
 <p><strong>Invitation-Only | May 2027 | 5 Days | Refinement &amp; Recalibration</strong></p>
 <p>This immersive luxury gathering brings together elite founders, investors, and executives for five days of leadership refinement, strategic clarity, and performance recalibration in Mallorca, Spain.</p>
