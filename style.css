@@ -8,7 +8,7 @@ a{color:inherit;text-underline-offset:.25em}
 a:hover{color:#765c2c}
 :focus-visible{outline:2px solid #9c7430;outline-offset:5px}
 h1,h2,h3,p{margin:0 0 .75em}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.03}
+h1,h2,h3,.prose .lead{font-family:var(--serif);font-weight:500;line-height:1.03}
 h1{font-size:clamp(3.1rem,7.5vw,7rem);max-width:17ch}
 h2{font-size:clamp(2.6rem,6vw,5rem)}
 h3{font-size:1.9rem}
@@ -29,7 +29,7 @@ nav a[aria-current=page]{text-decoration:underline}
 .intro,.section,.page{padding-block:clamp(3.5rem,8vw,7rem)}
 .prose{max-width:47rem;font-size:1.12rem}
 .intro .prose{margin-inline:auto}
-.prose .lead{font-family:var(--sans);font-size:clamp(2rem,4vw,3.25rem);line-height:1.12}
+.prose .lead{font-size:clamp(2rem,4vw,3.25rem);line-height:1.12}
 .eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
 .wash{background:var(--wash)}
 .opinions,.clients,.team{display:grid;gap:1rem}
