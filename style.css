@@ -62,7 +62,7 @@ footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;pa
 .socials{display:flex;gap:.55rem;margin-top:1rem}
 .socials a,.socials span{display:grid;place-items:center;border:1px solid #a99f8d;width:2rem;height:2rem;border-radius:50%;text-decoration:none;font-weight:700}
 .socials span{color:#b9ad96}
-.button{display:inline-flex;gap:.6rem;align-items:center;border:1px solid currentColor;border-radius:2rem;padding:.65rem 1.2rem;text-decoration:none;font:inherit;font-weight:600;cursor:pointer}
+.button{display:inline-flex;gap:.6rem;align-items:center;justify-content:center;text-align:center;border:1px solid currentColor;border-radius:2rem;padding:.4rem .65rem;text-decoration:none;font-family:inherit;font-weight:600;cursor:pointer}
 .dark{background:#151412;color:white;border-color:#151412}
 .button:hover{background:#d9c69f;color:#151412}
 .gallery{position:relative;background:#191714;color:white}
@@ -113,3 +113,15 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 .page-back::before{content:"";width:29%;aspect-ratio:3/4;background:currentColor;clip-path:polygon(80% 0,0 50%,80% 100%,100% 85%,43% 50%,100% 15%)}
 
 .photo-track .gallery-portrait{object-fit:contain;background:#191714}
+
+/* Shared text button size, including the footer link and event disclosure. */
+.button,.footer-grid>div>a.button,.event-booking-toggle>summary.button{
+  display:inline-flex;
+  inline-size:11rem;
+  max-inline-size:100%;
+  min-width:0;
+  block-size:3.275rem;
+  min-height:0;
+  font-size:1.12rem;
+  line-height:1.2;
+}
