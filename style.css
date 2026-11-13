@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
-:root{--ink:#161513;--paper:#fff;--wash:#f4f2ed;--gold:#b69a61;--serif:"Instrument Serif",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+:root{--ink:#161513;--paper:#fff;--wash:#f4f2ed;--gold:#b69a61;--sans:"Avenir Next",Avenir,"Century Gothic",Arial,sans-serif}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.65 var(--sans)}
 img{display:block;max-width:100%;height:auto}
@@ -7,7 +6,7 @@ a{color:inherit;text-underline-offset:.25em}
 a:hover{color:#765c2c}
 :focus-visible{outline:2px solid #9c7430;outline-offset:5px}
 h1,h2,h3,p{margin:0 0 .75em}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.03}
+h1,h2,h3{font-family:var(--sans);font-weight:400;line-height:1.03}
 h1{font-size:clamp(3.1rem,7.5vw,7rem);max-width:17ch}
 h2{font-size:clamp(2.6rem,6vw,5rem)}
 h3{font-size:1.9rem}
@@ -27,7 +26,7 @@ nav a[aria-current=page]{text-decoration:underline}
 .intro,.section,.page{padding-block:clamp(3.5rem,8vw,7rem)}
 .prose{max-width:47rem;font-size:1.12rem}
 .intro .prose{margin-inline:auto}
-.prose .lead{font-family:var(--serif);font-size:clamp(2rem,4vw,3.25rem);line-height:1.12}
+.prose .lead{font-family:var(--sans);font-size:clamp(2rem,4vw,3.25rem);line-height:1.12}
 .eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
 .wash{background:var(--wash)}
 .opinions,.clients,.team{display:grid;gap:1rem}
@@ -60,7 +59,7 @@ footer{background:#111;color:#fff;padding:3rem 0}
 .button:hover{background:#d9c69f;color:#151412}
 .gallery{background:#191714;color:white;padding:1rem 0}
 .gallery-controls{display:flex;justify-content:flex-end;gap:.6rem;margin-bottom:1rem}
-.gallery button{border:1px solid #a99f8d;border-radius:50%;color:inherit;background:transparent;width:2.7rem;height:2.7rem;cursor:pointer;font-size:1.25rem}
+.gallery button{border:1px solid #a99f8d;border-radius:50%;color:inherit;background:transparent;width:2.7rem;height:2.7rem;cursor:pointer;font:inherit;font-size:1.25rem}
 .photo-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1rem .6rem}
 .photo-track img{flex:0 0 clamp(17rem,34vw,37rem);width:clamp(17rem,34vw,37rem);aspect-ratio:3/2;object-fit:cover;scroll-snap-align:center;background:#302c25}
 .founder{width:min(100%,26rem);margin-bottom:2rem}
