@@ -33,3 +33,16 @@ if (form) {
     location.href = `${form.action}?subject=${subject}&body=${body}`;
   });
 }
+
+const backLink = document.querySelector(".page-back");
+if (backLink && document.referrer) {
+  const previousPage = new URL(document.referrer);
+  const siteRoot = new URL(".", backLink.href);
+  if (previousPage.origin === siteRoot.origin && previousPage.pathname.startsWith(siteRoot.pathname) && history.length > 1) {
+    backLink.addEventListener("click", (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      history.back();
+    });
+  }
+}
