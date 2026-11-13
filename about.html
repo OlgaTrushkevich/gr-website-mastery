@@ -12,7 +12,6 @@
     @media (max-width: 42rem) {
       .about-title { font-size: clamp(1.75rem, 5.95vw, 2.45rem); }
     }
-    #our-story-title { font-size: clamp(3rem, 7vw, 6rem); }
     .story-video-placeholder {
       display: grid;
       place-items: center;
@@ -40,6 +39,23 @@
       border: 0;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
+    .ecosystem-content { max-width: none; }
+    .ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .ecosystem-grid article {
+      padding: clamp(1rem, 2.5vw, 2rem);
+      border-top: 2px solid var(--gold);
+      border-radius: .75rem;
+      background: var(--wash);
+    }
+    .ecosystem-grid article > :last-child { margin-bottom: 0; }
+    @media (max-width: 54rem) {
+      .ecosystem-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -55,30 +71,35 @@
 <p><strong>Our conviction is simple: The future of leadership requires mastery of the human directing the technology.</strong></p></div></article>
   <hr class="about-divider wrap" aria-hidden="true">
   <section class="section wrap" id="our-story" aria-labelledby="our-story-title">
-  <h2 id="our-story-title">Our Story</h2>
+  <h2 id="our-story-title" class="about-title">Our Story</h2>
   <div class="story-video-placeholder">YouTube video coming soon</div>
 </section>
 <section class="section wrap" id="ecosystem" aria-labelledby="ecosystem-title">
-  <h2 id="ecosystem-title">The MASTERY. Ecosystem</h2>
+  <h2 id="ecosystem-title" class="about-title">The MASTERY. Ecosystem</h2>
   <h3>One Philosophy. Multiple Dimensions of Impact.</h3>
-  <div class="prose">
+  <div class="prose ecosystem-content">
     <p>MASTERY. translates its intellectual property into practical leadership infrastructure through an evolving ecosystem of strategic advisement, technology, and media.</p>
-
-    <h3>MASTERY. ADVISORY</h3>
-    <p>Our private advisory practice delivers highly individualized strategic guidance and executive performance development.</p>
-    <p>Working with founders, senior executives, entrepreneurs, and influential decision-makers, MASTERY. Advisory applies our proprietary methodologies to the complexities of high-level leadership, decision-making, and organizational performance.</p>
-    <p>Engagements are characterized by discretion, precision, and an uncompromising commitment to the individual and their objectives.</p>
-    <p><a class="button dark" href="https://www.themasterycompany.com/advisory">Explore Advisory</a></p>
-
-    <h3>MASTERY. TECH</h3>
-    <p>Our technology division is developing a proprietary digital platform designed to extend the application of the Mastery Methods™ beyond traditional advisory environments.</p>
-    <p>Built around personalized performance intelligence, structured methodologies, and technology-enabled development, the platform is intended to support individuals and organizations in strengthening their capacity for self-governance and sustained performance.</p>
-    <p>MASTERY. Tech represents the evolution of our intellectual property into scalable leadership infrastructure.</p>
-
-    <h3>MASTERY. MEDIA</h3>
-    <p>Our media division advances the intellectual influence of MASTERY. through publishing, podcasting, and original thought leadership.</p>
-    <p>Dedicated to exploring the intersection of human consciousness, leadership, sovereignty, and technological advancement, MASTERY. Media brings the institution's philosophy and perspectives to a broader global audience.</p>
-    <p>Through compelling discourse and original content, the division seeks to challenge prevailing paradigms, elevate the conversation around human performance, and contribute to the evolution of leadership in the age of AI.</p>
+    <div class="ecosystem-grid">
+      <article>
+        <h3>MASTERY. ADVISORY</h3>
+        <p>Our private advisory practice delivers highly individualized strategic guidance and executive performance development.</p>
+        <p>Working with founders, senior executives, entrepreneurs, and influential decision-makers, MASTERY. Advisory applies our proprietary methodologies to the complexities of high-level leadership, decision-making, and organizational performance.</p>
+        <p>Engagements are characterized by discretion, precision, and an uncompromising commitment to the individual and their objectives.</p>
+        <p><a class="button dark" href="advisory.html">Explore Advisory</a></p>
+      </article>
+      <article>
+        <h3>MASTERY. TECH</h3>
+        <p>Our technology division is developing a proprietary digital platform designed to extend the application of the Mastery Methods™ beyond traditional advisory environments.</p>
+        <p>Built around personalized performance intelligence, structured methodologies, and technology-enabled development, the platform is intended to support individuals and organizations in strengthening their capacity for self-governance and sustained performance.</p>
+        <p>MASTERY. Tech represents the evolution of our intellectual property into scalable leadership infrastructure.</p>
+      </article>
+      <article>
+        <h3>MASTERY. MEDIA</h3>
+        <p>Our media division advances the intellectual influence of MASTERY. through publishing, podcasting, and original thought leadership.</p>
+        <p>Dedicated to exploring the intersection of human consciousness, leadership, sovereignty, and technological advancement, MASTERY. Media brings the institution's philosophy and perspectives to a broader global audience.</p>
+        <p>Through compelling discourse and original content, the division seeks to challenge prevailing paradigms, elevate the conversation around human performance, and contribute to the evolution of leadership in the age of AI.</p>
+      </article>
+    </div>
   </div>
 </section>
 </main>
