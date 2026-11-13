@@ -16,11 +16,11 @@ h3{font-size:1.9rem}
 .skip{position:absolute;top:.5rem;left:1rem;background:white;padding:.5rem;transform:translateY(-160%);z-index:2}
 .skip:focus{transform:none}
 header{font-family:var(--serif);border-bottom:1px solid #dedad0}
-.header-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;min-height:7.8rem}
+.header-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;min-height:10.14rem}
 .brand{display:inline-block;width:12rem;max-width:100%}
 .header-inner .brand{width:15.6rem;flex-shrink:0}
 nav{display:flex;flex-wrap:wrap;gap:.4rem 1.55rem}
-nav a{text-decoration:none;font-size:1.125rem;font-weight:600;letter-spacing:.055em}
+nav a{text-decoration:none;font-size:1.4625rem;font-weight:600;letter-spacing:.055em}
 nav a[aria-current=page]{text-decoration:underline}
 .hero{background:#0b0a09;color:white}
 .hero-inner{padding-block:clamp(5rem,12vw,11rem)}
