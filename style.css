@@ -45,7 +45,6 @@ nav a[aria-current=page]{text-decoration:underline}
 .team img,.portrait{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 32%;filter:grayscale(1);border-radius:.35rem 2rem .35rem .35rem;margin-bottom:1rem;background:#e6e2d9}
 .team h3{margin-bottom:.2em}
 .pending p{color:#625b51}
-.faq{max-width:54rem}
 details{border-top:1px solid #d7d2c6;padding:1rem 0}
 details:last-child{border-bottom:1px solid #d7d2c6}
 summary{cursor:pointer;font-weight:600}
