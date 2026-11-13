@@ -95,3 +95,11 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 .event-card{padding:clamp(1.5rem,4vw,3rem);background:var(--wash);border-radius:1.5rem}
 .event-card h2,.event-booking h2{font-size:clamp(2.4rem,5vw,4rem)}
 .event-booking{margin-top:3rem;scroll-margin-top:1.5rem}
+
+.footer-contacts{border:0;padding:0;margin-bottom:.55rem}
+.footer-contacts summary{width:fit-content;list-style:none;text-decoration:underline;font-weight:inherit}
+.footer-contacts summary::-webkit-details-marker{display:none}
+.footer-contacts summary::after{content:"";display:inline-block;width:.36em;height:.36em;margin-inline-start:.55em;border:solid currentColor;border-width:0 1px 1px 0;transform:translateY(-.18em) rotate(45deg)}
+.footer-contacts[open] summary::after{transform:rotate(225deg)}
+.contact-dropdown{margin-top:.6rem;padding:.65rem .8rem;border:1px solid #51483c;border-radius:.5rem;background:#211e19}
+.footer-contacts .contact-dropdown address{margin:0}
