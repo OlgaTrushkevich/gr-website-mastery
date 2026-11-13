@@ -29,7 +29,7 @@ nav a[aria-current=page]{text-decoration:underline}
 .intro,.section,.page{padding-block:clamp(3.5rem,8vw,7rem)}
 .prose{max-width:47rem;font-size:1.12rem}
 .intro .prose{margin-inline:auto}
-.intro .prose > p{font-family:var(--serif);font-weight:500}
+.intro .prose > p,.faq summary{font-family:var(--serif);font-weight:500}
 .intro .prose > p strong{font-weight:700}
 .prose .lead{font-size:clamp(2rem,4vw,3.25rem);line-height:1.12}
 .eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
@@ -50,7 +50,7 @@ nav a[aria-current=page]{text-decoration:underline}
 details{border-top:1px solid #d7d2c6;padding:1rem 0}
 details:last-child{border-bottom:1px solid #d7d2c6}
 summary{cursor:pointer;font-weight:600}
-.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none}
+.faq summary{font-size:1.12rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";font-size:1.25rem;line-height:1;margin-inline-end:2cm}
 .faq details[open]>summary::after{content:"−"}
@@ -139,7 +139,7 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
   h1{font-size:clamp(2.5rem,8.5vw,3.5rem)}
   h2{font-size:clamp(2.25rem,7.5vw,3rem)}
   h1,h2,h3{overflow-wrap:anywhere}
-  .prose{font-size:1.0625rem}
+  .prose,.faq summary{font-size:1.0625rem}
   .opinions,.clients,.team{grid-template-columns:repeat(2,minmax(0,1fr))}
   .opinions article,.team article{padding:1rem}
   .faq summary::after{margin-inline-end:.5rem}
