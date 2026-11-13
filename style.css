@@ -58,7 +58,7 @@ details p{margin:.75rem 0 0}
 footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;padding:3rem 0}
 .footer-grid{display:grid;grid-template-columns:1.3fr 1.2fr .7fr auto;gap:1.5rem}
 .footer-grid>div>a{display:block;width:fit-content;margin-bottom:.55rem}
-.footer-grid .brand{background:white}
+.footer-grid .brand{width:8.4rem;background:white}
 .socials{display:flex;gap:.55rem;margin-top:1rem}
 .socials a,.socials span{display:grid;place-items:center;border:1px solid #a99f8d;width:2rem;height:2rem;border-radius:50%;text-decoration:none;font-weight:700}
 .socials span{color:#b9ad96}
