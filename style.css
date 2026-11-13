@@ -72,7 +72,7 @@ footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;pa
 .gallery button[data-slide="-1"]::before{transform:scaleX(-1)}
 .photo-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .photo-track::-webkit-scrollbar{display:none}
-.photo-track img{flex:0 0 76%;width:76%;height:clamp(15rem,41vw,36rem);object-fit:cover;scroll-snap-align:start;background:#302c25}
+.photo-track img{flex:0 0 auto;width:min(100%,480px);height:auto;aspect-ratio:3/2;object-fit:cover;scroll-snap-align:start;background:#302c25}
 .founder{width:min(100%,26rem);margin-bottom:2rem}
 .tabs{display:flex;gap:1rem;border-bottom:1px solid #d7d2c6;margin-bottom:1.5rem}
 .tabs a{padding:.5rem;text-decoration:none}
@@ -140,7 +140,6 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
   h2{font-size:clamp(2.25rem,7.5vw,3rem)}
   h1,h2,h3{overflow-wrap:anywhere}
   .prose{font-size:1.0625rem}
-  .photo-track img{flex-basis:100%;width:100%;height:clamp(15rem,70vw,26rem)}
   .opinions,.clients,.team{grid-template-columns:repeat(2,minmax(0,1fr))}
   .opinions article,.team article{padding:1rem}
   .faq summary::after{margin-inline-end:.5rem}
