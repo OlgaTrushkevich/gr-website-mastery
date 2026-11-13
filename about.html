@@ -22,19 +22,39 @@
       border-radius: 1rem;
       text-align: center;
     }
+    .about-label {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .96rem;
+    }
+    .about-label::before {
+      content: "";
+      width: 1.75rem;
+      height: 1px;
+      background: var(--gold);
+    }
+    .about-divider {
+      height: 1px;
+      margin-block: 0;
+      border: 0;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><div class="header-inner wrap"><a href="index.html" class="brand"><img src="assets/logo.png" width="363" height="127" alt="MASTERY. Performance by Peace"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="advisory.html">Services</a><a href="insights.html">Insights</a><a href="events.html">New Events</a></nav></div></header>
   <div class="page-back-row wrap" style="padding-block-start: clamp(0px, calc(clamp(3.5rem, 8vw, 7rem) - 4cm), 2cm)"><a class="page-back" href="index.html" aria-label="Back"></a></div>
-  <main id="main"><article class="intro wrap" style="padding-block-start: max(0px, calc(clamp(3.5rem, 8vw, 7rem) - 6cm))"><p class="eyebrow">About MASTERY.</p><h1 class="about-title" style="max-width: none">Leadership Infrastructure for Human Sovereignty in the Age of AI.</h1><div class="prose" style="max-width: none">
+  <main id="main"><article class="intro wrap" style="padding-block-start: max(0px, calc(clamp(3.5rem, 8vw, 7rem) - 6cm))"><p class="eyebrow about-label">About MASTERY.</p><h1 class="about-title" style="max-width: none">Leadership Infrastructure for Human Sovereignty in the Age of AI.</h1><div class="prose" style="max-width: none">
 <p>As technological intelligence advances at unprecedented speed, the capacity for human self-governance has become one of the defining leadership imperatives of our time.</p>
 <p>Greater intelligence does not inherently produce greater wisdom. Greater capability does not guarantee greater discernment. And greater influence does not necessarily reflect greater internal command.</p>
 <p>MASTERY. exists to address this widening divide.</p>
 <p>We are a leadership infrastructure company dedicated to advancing human sovereignty, executive precision, and sustained high-level performance.</p>
 <p>Through proprietary methodologies, strategic advisement, and technology-enabled leadership development, we strengthen the internal architecture through which individuals, teams, and organizations think, decide, and lead.</p>
-<p><strong>Our conviction is simple: The future of leadership requires mastery of the human directing the technology.</strong></p></div></article><section class="section wrap" id="our-story" aria-labelledby="our-story-title">
+<p><strong>Our conviction is simple: The future of leadership requires mastery of the human directing the technology.</strong></p></div></article>
+  <hr class="about-divider wrap" aria-hidden="true">
+  <section class="section wrap" id="our-story" aria-labelledby="our-story-title">
   <h2 id="our-story-title">Our Story</h2>
   <div class="story-video-placeholder">YouTube video coming soon</div>
 </section>
