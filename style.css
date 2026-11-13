@@ -1,4 +1,6 @@
-:root{--ink:#161513;--paper:#fff;--wash:#f4f2ed;--gold:#b69a61;--sans:"Avenir Next",Avenir,"Century Gothic",Arial,sans-serif}
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+
+:root{--ink:#161513;--paper:#fff;--wash:#f4f2ed;--gold:#b69a61;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Avenir Next",Avenir,"Century Gothic",Arial,sans-serif}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.65 var(--sans)}
 img{display:block;max-width:100%;height:auto}
@@ -6,18 +8,18 @@ a{color:inherit;text-underline-offset:.25em}
 a:hover{color:#765c2c}
 :focus-visible{outline:2px solid #9c7430;outline-offset:5px}
 h1,h2,h3,p{margin:0 0 .75em}
-h1,h2,h3{font-family:var(--sans);font-weight:400;line-height:1.03}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.03}
 h1{font-size:clamp(3.1rem,7.5vw,7rem);max-width:17ch}
 h2{font-size:clamp(2.6rem,6vw,5rem)}
 h3{font-size:1.9rem}
 .wrap{width:min(100% - 3rem, 76rem);margin-inline:auto}
 .skip{position:absolute;top:.5rem;left:1rem;background:white;padding:.5rem;transform:translateY(-160%);z-index:2}
 .skip:focus{transform:none}
-header{border-bottom:1px solid #dedad0}
+header{font-family:var(--serif);border-bottom:1px solid #dedad0}
 .header-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;min-height:6rem}
 .brand{display:inline-block;width:12rem;max-width:100%}
 nav{display:flex;flex-wrap:wrap;gap:.4rem 1.55rem}
-nav a{text-decoration:none;font-size:.9rem}
+nav a{text-decoration:none;font-size:1.125rem;font-weight:600;letter-spacing:.055em}
 nav a[aria-current=page]{text-decoration:underline}
 .hero{background:#0b0a09;color:white}
 .hero-inner{padding-block:clamp(5rem,12vw,11rem)}
@@ -47,7 +49,7 @@ details{border-top:1px solid #d7d2c6;padding:1rem 0}
 details:last-child{border-bottom:1px solid #d7d2c6}
 summary{cursor:pointer;font-weight:600}
 details p{margin:.75rem 0 0}
-footer{background:#111;color:#fff;padding:3rem 0}
+footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;padding:3rem 0}
 .footer-grid{display:grid;grid-template-columns:1.3fr 1.2fr .7fr auto;gap:1.5rem}
 .footer-grid>div>a{display:block;width:fit-content;margin-bottom:.55rem}
 .footer-grid .brand{background:white}
@@ -76,7 +78,7 @@ form button{justify-self:start}
 @media(max-width:26rem){.team,.footer-grid{grid-template-columns:1fr}.wrap{width:calc(100% - 2rem)}}
 
 address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
-.footer-grid address{font-size:.9rem;color:#e2d3b2}
+.footer-grid address{font-size:1rem;color:#e2d3b2}
 #our-story .eyebrow,#our-story h2:not(:first-child){margin-top:2rem}
 .logo-placeholders span{font-size:2rem;line-height:1;color:#76664a}
 .wash .logo-placeholders div{background:white}
