@@ -29,6 +29,8 @@ nav a[aria-current=page]{text-decoration:underline}
 .intro,.section,.page{padding-block:clamp(3.5rem,8vw,7rem)}
 .prose{max-width:47rem;font-size:1.12rem}
 .intro .prose{margin-inline:auto}
+.intro .prose > p{font-family:var(--serif);font-weight:500}
+.intro .prose > p strong{font-weight:700}
 .prose .lead{font-size:clamp(2rem,4vw,3.25rem);line-height:1.12}
 .eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
 .wash{background:var(--wash)}
