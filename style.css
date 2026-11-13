@@ -18,6 +18,7 @@ h3{font-size:1.9rem}
 header{font-family:var(--serif);border-bottom:1px solid #dedad0}
 .header-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;min-height:7.8rem}
 .brand{display:inline-block;width:12rem;max-width:100%}
+.header-inner .brand{width:15.6rem;flex-shrink:0}
 nav{display:flex;flex-wrap:wrap;gap:.4rem 1.55rem}
 nav a{text-decoration:none;font-size:1.125rem;font-weight:600;letter-spacing:.055em}
 nav a[aria-current=page]{text-decoration:underline}
