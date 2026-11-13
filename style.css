@@ -162,3 +162,7 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 .page-opening-label::before{content:"";width:1.75rem;height:1px;background:var(--gold)}
 .page-opening-title{max-width:none;font-size:clamp(2.17rem,5.25vw,4.9rem)}
 @media (max-width:42rem){.page-opening-title{font-size:clamp(1.75rem,5.95vw,2.45rem)}}
+
+.page-back-row.with-page-label{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
+.with-page-label .page-back{flex-shrink:0}
+.with-page-label .page-opening-label{margin:2cm 0 0;white-space:nowrap}
