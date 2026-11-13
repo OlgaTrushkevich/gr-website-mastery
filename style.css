@@ -18,7 +18,7 @@ h3{font-size:1.9rem}
 header{font-family:var(--serif);border-bottom:1px solid #dedad0}
 .header-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;min-height:10.14rem}
 .brand{display:inline-block;width:12rem;max-width:100%}
-.header-inner .brand{width:15.6rem;flex-shrink:0}
+.header-inner .brand{width:20.28rem;flex-shrink:0}
 nav{display:flex;flex-wrap:wrap;gap:.4rem 1.55rem}
 nav a{text-decoration:none;font-size:1.4625rem;font-weight:600;letter-spacing:.055em}
 nav a[aria-current=page]{text-decoration:underline}
@@ -125,7 +125,7 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 
 @media (max-width: 54rem) {
   .header-inner{flex-direction:column;gap:.5rem;min-height:0;padding-block:.75rem}
-  .header-inner .brand{width:12rem}
+  .header-inner .brand{width:15.6rem}
   .header-inner nav{justify-content:center;gap:.15rem .75rem}
   .header-inner nav a{display:flex;align-items:center;min-height:44px;font-size:1.15rem}
   .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
