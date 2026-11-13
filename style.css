@@ -155,3 +155,10 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 @media (max-width: 26rem) {
   .opinions,.team,.footer-grid{grid-template-columns:1fr}
 }
+
+.page-opening-back{padding-block-start:clamp(0px,calc(clamp(3.5rem,8vw,7rem) - 4cm),2cm)}
+.page-opening{padding-block-start:max(0px,calc(clamp(3.5rem,8vw,7rem) - 6cm))}
+.page-opening-label{display:flex;align-items:center;gap:.75rem;font:600 .96rem/1.65 var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.page-opening-label::before{content:"";width:1.75rem;height:1px;background:var(--gold)}
+.page-opening-title{max-width:none;font-size:clamp(2.17rem,5.25vw,4.9rem)}
+@media (max-width:42rem){.page-opening-title{font-size:clamp(1.75rem,5.95vw,2.45rem)}}
