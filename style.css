@@ -50,7 +50,7 @@ details:last-child{border-bottom:1px solid #d7d2c6}
 summary{cursor:pointer;font-weight:600}
 .faq summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-size:1.25rem;line-height:1}
+.faq summary::after{content:"+";font-size:1.25rem;line-height:1;margin-inline-end:2cm}
 .faq details[open]>summary::after{content:"−"}
 details p{margin:.75rem 0 0}
 footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;padding:3rem 0}
