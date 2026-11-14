@@ -67,7 +67,7 @@ footer{font-family:var(--serif);font-size:1.125rem;background:#111;color:#fff;pa
 .button:hover{background:#d9c69f;color:#151412}
 .gallery{position:relative;background:#191714;color:white}
 .gallery-controls{position:absolute;inset:0;width:auto;display:flex;align-items:center;justify-content:space-between;padding-inline:clamp(.65rem,2.5vw,2.25rem);pointer-events:none;z-index:1}
-.gallery button{display:grid;place-items:center;pointer-events:auto;width:clamp(3rem,9vw,7.5rem);aspect-ratio:1;padding:0;border:0;background:transparent;cursor:pointer;font-size:0}
+.gallery button{display:grid;place-items:center;pointer-events:auto;width:3.25rem;aspect-ratio:1;padding:0;border:1px solid #f4e8ce;border-radius:50%;background:linear-gradient(145deg,#f4e8ce,#d5c5a7);box-shadow:inset 0 1px 3px #fff9,0 2px 6px #0003;cursor:pointer;font-size:0}
 .gallery button::before{content:"";width:24%;height:46.667%;filter:drop-shadow(0 0 2px #fff);background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2036%2056%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M7%206%20L29%2028%20L7%2050%22%20fill%3D%22none%22%20stroke%3D%22%23080808%22%20stroke-width%3D%2211%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center/100% 100% no-repeat}
 .gallery button[data-slide="-1"]::before{transform:scaleX(-1)}
 .photo-track{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
@@ -108,6 +108,7 @@ address{font-style:normal;margin-bottom:1rem;overflow-wrap:anywhere}
 .page-back:hover{background:#f8eedb;color:#111}
 .page-back::before{content:"";width:29%;aspect-ratio:3/4;background:currentColor;clip-path:polygon(80% 0,0 50%,80% 100%,100% 85%,43% 50%,100% 15%)}
 
+.photo-track .gallery-summit{object-view-box:inset(0 5.6%)}
 .photo-track .gallery-portrait{object-fit:contain;background:#191714}
 
 /* Shared text button size, including the footer link and event disclosure. */
