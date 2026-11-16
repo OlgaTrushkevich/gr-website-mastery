@@ -6,13 +6,75 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css?v=cc2b03a">
   <script src="site.js" defer></script>
+  <style>
+    .services-overview { background:#111; color:#fff; padding-block:clamp(3.5rem,7vw,6rem); }
+    .services-overview-grid { display:grid; grid-template-columns:minmax(13rem,.72fr) minmax(0,1.5fr); gap:clamp(2rem,7vw,7rem); align-items:start; }
+    .services-overview h1 { margin:0; font:500 clamp(3rem,6vw,5.5rem)/1 var(--serif); letter-spacing:-.035em; }
+    .services-copy { max-width:60rem; color:#f0eee9; font-size:clamp(1rem,1.35vw,1.18rem); line-height:1.75; }
+    .services-copy p { margin-bottom:1.2rem; }
+    .service-tags { display:flex; flex-wrap:wrap; gap:.6rem; margin:1.4rem 0 0; padding:0; list-style:none; }
+    .service-tags li { border:1px solid #5a554b; border-radius:2rem; padding:.38rem .8rem; color:#f2eadb; font-size:.88rem; line-height:1.35; }
+    .service-matrix-section { padding-block:clamp(3.5rem,7vw,6rem); background:var(--wash); }
+    .service-matrix-section h2 { margin-bottom:1.5rem; font-size:clamp(2.2rem,4.5vw,3.5rem); }
+    .service-table-scroll { overflow-x:auto; border:1px solid #d7d2c6; border-radius:.6rem; background:#fff; -webkit-overflow-scrolling:touch; }
+    .service-matrix { width:100%; min-width:62rem; border-collapse:collapse; font-size:.94rem; line-height:1.5; }
+    .service-matrix th,.service-matrix td { padding:.85rem 1rem; border-bottom:1px solid #e1ded7; border-right:1px solid #e1ded7; text-align:left; vertical-align:top; }
+    .service-matrix th:last-child,.service-matrix td:last-child { border-right:0; }
+    .service-matrix thead th { background:#211f1b; color:#fff; font-weight:600; }
+    .service-matrix tbody tr:last-child td { border-bottom:0; }
+    .service-matrix tbody tr:nth-child(even) { background:#faf9f6; }
+    @media(max-width:48rem) {
+      .services-overview-grid { grid-template-columns:1fr; gap:1.5rem; }
+      .services-overview h1 { font-size:clamp(2.8rem,12vw,4.25rem); }
+      .service-matrix { font-size:.88rem; }
+      .service-matrix th,.service-matrix td { padding:.7rem .75rem; }
+    }
+  </style>
+
   <title>Executive Advisory | MASTERY.</title>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><div class="header-inner wrap"><a href="index.html" class="brand"><img src="assets/logo.png" width="363" height="127" alt="MASTERY. Performance by Peace"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="advisory.html" aria-current="page">Services</a><a href="insights.html">Insights</a><a href="events.html">New Events</a></nav></div></header>
-  <div class="page-back-row wrap with-page-label page-opening-back"><a class="page-back" href="index.html" aria-label="Back"></a><p class="page-opening-label">Services</p></div>
-  <main id="main"><article class="page wrap page-opening"><h1 class="page-opening-title">Executive Advisory</h1><div class="prose"><p>Private advisory for founders, senior executives, and organizations facing consequential decisions. Engagements focus on decision quality, leadership under pressure, and sustainable performance.</p><a class="button dark" href="request.html">Request an engagement ↗</a></div></article><section class="section wrap" id="leadership-philosophy"><div class="prose"><p class="eyebrow">The Philosophy Behind the Vision</p>
+  <div class="page-back-row wrap with-page-label page-opening-back"><a class="page-back" href="index.html" aria-label="Back"></a><p class="page-opening-label">Advisory</p></div>
+  <main id="main">
+    <section class="services-overview" aria-labelledby="services-title">
+      <div class="services-overview-grid wrap">
+        <h1 id="services-title">Services</h1>
+        <div>
+          <div class="services-copy">
+            <p>MASTERY. provides private advisement for founders, executives, investors, and high-level leaders seeking greater clarity, precision, and command across both personal and professional domains.</p>
+            <p>Through proprietary methodologies integrating psychology, strategic foresight, and internal performance architecture, this work is designed to refine leadership, execution, and sustainable high performance under pressure.</p>
+          </div>
+          <ul class="service-tags" aria-label="Service categories">
+            <li>Executive Coaching</li><li>Corporate Training</li><li>Leadership Development</li><li>Public Speaking</li><li>Management Consulting</li><li>Business Consulting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="service-matrix-section" aria-labelledby="service-matrix-title">
+      <div class="wrap">
+        <h2 id="service-matrix-title">Who We Serve</h2>
+        <div class="service-table-scroll" tabindex="0" role="region" aria-label="Services, target audiences, and value propositions. Scroll horizontally to see all columns.">
+          <table class="service-matrix">
+            <thead><tr><th scope="col">Target audience</th><th scope="col">Relevant MASTERY. offerings</th><th scope="col">Value proposition</th></tr></thead>
+            <tbody>
+              <tr><td>UHNW Individuals &amp; Family Office Principals</td><td>Private Executive Advisory, Calibration Sessions, Vortex Gold</td><td>Personal sovereignty, executive performance, discernment, decision-making, and sustained excellence</td></tr>
+              <tr><td>Founders, CEOs &amp; Senior Executives</td><td>1:1 Executive Advisory, Calibration Sessions, Vortex Gold</td><td>Strengthening the human capabilities behind effective leadership, strategic clarity, and high-stakes decision-making</td></tr>
+              <tr><td>Corporations &amp; Enterprise Leadership Teams</td><td>Executive Development Programs, Leadership Workshops, MASTERY. Technology</td><td>Developing leadership capability, human governance, organizational effectiveness, and responsible AI adoption</td></tr>
+              <tr><td>Private Equity &amp; Venture Capital Firms</td><td>Portfolio Leadership Programs, Founder Advisory, Executive Workshops</td><td>Enhancing founder effectiveness, leadership maturity, and performance across portfolio companies</td></tr>
+              <tr><td>Conferences &amp; Executive Forums</td><td>Keynotes, Panel Discussions, Executive Workshops</td><td>Thought leadership on human sovereignty, executive performance, and the human governance gap in AI</td></tr>
+              <tr><td>Private Members' Clubs &amp; Executive Networks</td><td>Private Talks, Leadership Salons, Curated Workshops</td><td>Exclusive intellectual experiences and practical leadership development for influential members</td></tr>
+              <tr><td>AI &amp; Technology Organizations</td><td>Human Governance Workshops, Executive Advisory, Strategic Leadership Programs</td><td>Strengthening the human judgment, discernment, and accountability required to govern advanced technology</td></tr>
+              <tr><td>Universities &amp; Executive Education Institutions</td><td>Guest Lectures, Masterclasses, Executive Training</td><td>Introducing proprietary human performance methodologies into leadership education</td></tr>
+              <tr><td>Media, Podcasts &amp; Publishers</td><td>Founder Interviews, Expert Commentary, Editorial Contributions, MASTERY. Insights</td><td>Original perspectives on leadership, human consciousness, sovereignty, and AI</td></tr>
+              <tr><td>Professional Advisory Firms &amp; Strategic Partners</td><td>Referral Partnerships, Co-hosted Executive Sessions, Specialist Advisory</td><td>Complementary human performance expertise for their executive and private wealth clients</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+<article class="page wrap page-opening"><h1 class="page-opening-title">Executive Advisory</h1><div class="prose"><p>Private advisory for founders, senior executives, and organizations facing consequential decisions. Engagements focus on decision quality, leadership under pressure, and sustainable performance.</p><a class="button dark" href="request.html">Request an engagement ↗</a></div></article><section class="section wrap" id="leadership-philosophy"><div class="prose"><p class="eyebrow">The Philosophy Behind the Vision</p>
 <h2>Leadership Begins Within.</h2>
 <p>Through her work with leaders across diverse industries and spheres of influence, Balev has observed a consistent relationship between internal condition and external performance. Regardless of industry, influence, or achievement, the quality of leadership is fundamentally shaped by the individual's capacity for clarity, discernment, and self-command. Her approach recognizes that strategic capability, professional achievement, and intellectual intelligence do not inherently produce peace, integrity, or internal sovereignty.</p>
 <p>Indeed, the demands of exceptional achievement can expose the limitations of traditional performance models. Balev's work addresses these limitations by focusing on the internal architecture through which individuals perceive, decide, and act. Rather than approaching leadership exclusively through behavioral modification or external strategy, she examines the deeper conditions influencing cognition, emotional regulation, identity, and decision-making.</p>
