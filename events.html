@@ -4,75 +4,217 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css?v=cc2b03a">
+  <link rel="stylesheet" href="style.css?v=events-hero-faq">
   <script src="site.js" defer></script>
-  <title>New Events | MASTERY.</title>
+  <title>The 2027 Mastery Retreat | MASTERY.</title>
+  <meta name="description" content="An invitation-only five-day Mastery Retreat in Mallorca, Spain, in May 2027.">
   <style>
-    .event-card .prose > p:last-child { margin-bottom: 0; }
-    .event-booking-toggle, .event-booking-toggle:last-child {
-      margin: 40px 0 0;
-      padding: 0;
-      border: 0;
-      scroll-margin-top: 1.5rem;
+    .event-hero {
+      position: relative;
+      isolation: isolate;
+      color: #fff;
+      background: #25231f url("assets/gallery/grace-keynote.jpg") center 42% / cover no-repeat;
     }
-    .event-booking-toggle > summary {
-      display: inline-flex;
+    .event-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgb(12 12 12 / 76%) 0%, rgb(12 12 12 / 58%) 48%, rgb(12 12 12 / 35%) 100%);
+    }
+    .event-hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .72fr);
       align-items: center;
-      justify-content: center;
-      min-width: 7.5rem;
-      min-height: 4.35rem;
-      font-size: 1.12rem;
-      list-style: none;
+      gap: clamp(2rem, 6vw, 5.5rem);
+      min-height: 31rem;
+      padding-block: clamp(3rem, 7vw, 5rem);
     }
-    .event-booking-toggle > summary::-webkit-details-marker { display: none; }
-    .event-booking-toggle > .event-booking { margin-top: 1.5rem; }
-    .upcoming-event { margin-top: 1.5rem; }
-    .upcoming-event p { margin-bottom: 0; }
-    .event-card h2.page-opening-title { font-size: clamp(2.17rem, 5.25vw, 4.9rem); }
+    .event-copy { max-width: 42rem; }
+    .event-kicker {
+      margin-bottom: .9rem;
+      color: #f1dcae;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .event-copy h1 {
+      max-width: 13ch;
+      margin-bottom: 1rem;
+      font: 700 clamp(2.2rem, 4.4vw, 4rem)/1.08 var(--sans);
+      letter-spacing: -.035em;
+    }
+    .event-copy .event-subtitle {
+      margin-bottom: .65rem;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      font-weight: 600;
+    }
+    .event-copy .event-description { max-width: 39rem; color: #f0eee9; }
+    .countdown-label { margin: 1.8rem 0 .7rem; font-size: .82rem; font-weight: 600; }
+    .countdown { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .countdown-item {
+      display: grid;
+      min-width: 3.65rem;
+      padding: .45rem .55rem .35rem;
+      border-radius: .3rem;
+      background: #fff;
+      color: #222;
+      text-align: center;
+    }
+    .countdown-item strong { font-size: 1.35rem; line-height: 1.2; }
+    .countdown-item span { font-size: .62rem; line-height: 1.4; text-transform: uppercase; }
+    .event-form-card {
+      padding: clamp(1.3rem, 3vw, 2rem);
+      border-radius: .35rem;
+      background: #fff;
+      color: #222;
+      box-shadow: 0 1rem 3rem rgb(0 0 0 / 22%);
+    }
+    .event-form-card h2 {
+      margin-bottom: .4rem;
+      font: 700 1.45rem/1.2 var(--sans);
+    }
+    .event-form-card > p { margin-bottom: 1.15rem; color: #656565; font-size: .88rem; }
+    .event-form { display: grid; gap: .8rem; }
+    .event-form label { gap: .25rem; font-size: .78rem; font-weight: 600; }
+    .event-form input, .event-form textarea {
+      min-height: 2.8rem;
+      border: 1px solid #e1e1e1;
+      border-radius: .2rem;
+      padding: .65rem .75rem;
+      font: 400 .92rem/1.4 var(--sans);
+    }
+    .event-form textarea { min-height: 5rem; resize: vertical; }
+    .event-submit {
+      width: 100%;
+      min-height: 3rem;
+      border: 0;
+      border-radius: .2rem;
+      background: #d10b24;
+      color: #fff;
+      font: 700 .95rem/1.2 var(--sans);
+      cursor: pointer;
+    }
+    .event-submit:hover { background: #ad071c; color: #fff; }
+    .event-form-note { margin: 0; color: #6b6b6b; font-size: .72rem; line-height: 1.45; }
+    .event-faq-section {
+      padding-block: clamp(2.75rem, 6vw, 4.75rem);
+      background: #f5f5fc;
+    }
+    .event-faq-inner { width: min(100% - 3rem, 49rem); margin-inline: auto; }
+    .event-faq-section h2 {
+      margin-bottom: .4rem;
+      font: 700 clamp(1.8rem, 3vw, 2.35rem)/1.2 var(--sans);
+      text-align: center;
+    }
+    .event-faq-intro { margin-bottom: 1.5rem; color: #686875; font-size: .9rem; text-align: center; }
+    .event-faq details {
+      margin-bottom: .45rem;
+      padding: .95rem 1.1rem;
+      border: 0;
+      border-radius: .3rem;
+      background: #fff;
+      box-shadow: 0 1px 4px rgb(20 20 45 / 4%);
+    }
+    .event-faq details:last-child { border: 0; }
+    .event-faq summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      list-style: none;
+      font-size: .93rem;
+      font-weight: 700;
+    }
+    .event-faq summary::-webkit-details-marker { display: none; }
+    .event-faq summary::after { content: "+"; flex: 0 0 auto; color: #54545d; font-size: 1.2rem; font-weight: 400; }
+    .event-faq details[open] > summary::after { content: "−"; }
+    .event-faq details p { margin: .75rem 0 0; color: #5d5d67; font-size: .9rem; }
+    @media (max-width: 48rem) {
+      .event-hero-inner { grid-template-columns: 1fr; gap: 2rem; min-height: 0; }
+      .event-copy h1 { max-width: 16ch; }
+      .event-form-card { max-width: 34rem; }
+    }
     @media (max-width: 42rem) {
-      .event-card h2.page-opening-title { font-size: clamp(1.75rem, 5.95vw, 2.45rem); }
+      .event-hero-inner { width: calc(100% - 2rem); padding-block: 2.5rem; }
+      .event-copy h1 { font-size: clamp(2rem, 9vw, 3rem); }
+      .countdown-item { min-width: 3.3rem; }
+      .event-faq-inner { width: calc(100% - 2rem); }
+      .event-faq details { padding: .85rem; }
     }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header><div class="header-inner wrap"><a href="index.html" class="brand"><img src="assets/logo.png" width="363" height="127" alt="MASTERY. Performance by Peace"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="advisory.html">Services</a><a href="insights.html">Insights</a><a href="events.html" aria-current="page">New Events</a></nav></div></header>
-  <div class="page-back-row wrap with-page-label page-opening-back"><a class="page-back" href="index.html" aria-label="Back"></a><h1 class="page-opening-label">New Events</h1></div>
-  <main id="main"><article class="page wrap page-opening">
-
-<section class="event-card" aria-labelledby="mallorca-retreat">
-<h2 id="mallorca-retreat" class="page-opening-title">The 2027 Mastery Retreat - Mallorca, Spain</h2>
-<div class="prose">
-<p><strong>Invitation-Only | May 2027 | 5 Days | Refinement &amp; Recalibration</strong></p>
-<p>This immersive luxury gathering brings together elite founders, investors, and executives for five days of leadership refinement, strategic clarity, and performance recalibration in Mallorca, Spain.</p>
-<p>Includes private strategy sessions, leadership intensives, yacht-day executive gatherings, and advanced Mastery Method deep dives designed to align leadership clarity and enterprise vision.</p>
-<p>Applications by invitation only.</p>
-</div>
-<details class="event-booking-toggle" id="booking">
-  <summary class="button dark">Book Now</summary>
-  <section class="event-booking" aria-labelledby="booking-title">
-<h2 id="booking-title">Request an invitation</h2>
-<p>Share your contact details to prepare an email to MASTERY. Review and send it from your email app.</p>
-<form id="request-form" action="mailto:grace@themasterycompany.com" method="post" enctype="text/plain">
-<input type="hidden" name="topic" value="Invitation request — The 2027 Mastery Retreat, Mallorca">
-<label>Full name<input name="name" autocomplete="name" required></label>
-<label>Email<input name="email" type="email" autocomplete="email" required></label>
-<label>Message (optional)<textarea name="message" rows="5"></textarea></label>
-<button class="button dark" type="submit">Open email draft ↗</button>
-</form>
-</section>
-</details>
-</section>
-<section class="event-card upcoming-event" aria-labelledby="upcoming-event-one">
-<h2 id="upcoming-event-one">Upcoming Event</h2>
-<p>Details to be announced.</p>
-</section>
-<section class="event-card upcoming-event" aria-labelledby="upcoming-event-two">
-<h2 id="upcoming-event-two">Upcoming Event</h2>
-<p>Details to be announced.</p>
-</section>
-</article></main>
+  <main id="main">
+    <section class="event-hero" aria-labelledby="event-title">
+      <div class="event-hero-inner wrap">
+        <div class="event-copy">
+          <p class="event-kicker">Invitation only · May 2027 · 5 days</p>
+          <h1 id="event-title">The 2027 Mastery Retreat</h1>
+          <p class="event-subtitle">Mallorca, Spain — Refinement &amp; Recalibration</p>
+          <p class="event-description">Five days for founders, investors, and executives to step back, find strategic clarity, and recalibrate how they lead.</p>
+          <p class="countdown-label">Until May 2027</p>
+          <div class="countdown" id="event-countdown" aria-label="Countdown until May 2027">
+            <div class="countdown-item"><strong data-days>000</strong><span>days</span></div>
+            <div class="countdown-item"><strong data-hours>00</strong><span>hours</span></div>
+            <div class="countdown-item"><strong data-minutes>00</strong><span>minutes</span></div>
+            <div class="countdown-item"><strong data-seconds>00</strong><span>seconds</span></div>
+          </div>
+        </div>
+        <section class="event-form-card" aria-labelledby="invitation-title">
+          <h2 id="invitation-title">Request an invitation</h2>
+          <p>Leave your details and prepare a message to the MASTERY. team.</p>
+          <form class="event-form" action="mailto:grace@themasterycompany.com" method="post" enctype="text/plain">
+            <input type="hidden" name="topic" value="Invitation request — The 2027 Mastery Retreat, Mallorca">
+            <label>Full name<input name="name" autocomplete="name" placeholder="Your name" required></label>
+            <label>Email address<input name="email" type="email" autocomplete="email" placeholder="Your email" required></label>
+            <label>Phone number (optional)<input name="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></label>
+            <label>Message (optional)<textarea name="message" rows="3" placeholder="Anything you would like us to know?"></textarea></label>
+            <button class="event-submit" type="submit">Send request</button>
+            <p class="event-form-note">This opens a prefilled email in your email app; your details are not submitted on this website.</p>
+          </form>
+        </section>
+      </div>
+    </section>
+    <section class="event-faq-section" aria-labelledby="program-title">
+      <div class="event-faq-inner">
+        <h2 id="program-title">What is included in the program?</h2>
+        <p class="event-faq-intro">A few details about the five-day Mastery Retreat.</p>
+        <div class="event-faq">
+          <details><summary>What is the Mastery Retreat?</summary><p>An invitation-only five-day gathering in Mallorca focused on leadership refinement, strategic clarity, and performance recalibration.</p></details>
+          <details><summary>Who is the retreat for?</summary><p>Founders, investors, and executives seeking space to strengthen their leadership and reconnect their personal direction with their enterprise vision.</p></details>
+          <details><summary>What is included in the program?</summary><p>The retreat includes private strategy sessions, leadership intensives, yacht-day executive gatherings, and Mastery Method deep dives.</p></details>
+          <details><summary>When and where will it take place?</summary><p>The retreat is planned for May 2027 in Mallorca, Spain. The exact dates and venue will be shared with invited participants.</p></details>
+          <details><summary>How can I request an invitation?</summary><p>Send a request using the form above. Applications are by invitation only, and the MASTERY. team will follow up by email.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer><div class="footer-grid wrap"><div><a href="index.html" class="brand"><img src="assets/logo.png" width="363" height="127" alt="MASTERY. Performance by Peace"></a><div class="socials"><a href="https://www.linkedin.com/in/gracebalev/" aria-label="LinkedIn">in</a><span title="Facebook profile pending" aria-label="Facebook profile pending">f</span><a href="https://www.instagram.com/gracebalev/" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2.25"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2.25"/><circle cx="17.1" cy="6.9" r="1.2" fill="currentColor"/></svg></a><span title="Trustpilot profile pending" aria-label="Trustpilot profile pending">★</span></div></div><div><details class="footer-contacts"><summary>Contacts</summary><div class="contact-dropdown"><address>Grace Balev<br><a href="mailto:grace@themasterycompany.com">grace@themasterycompany.com</a><br>Passatge de la Concepcio, 11, 201<br>Barcelona, 08008</address></div></details><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="index.html#faq">Frequently Asked Questions</a></div><div><a href="advisory.html">Services</a><a href="insights.html#news">News</a><a href="events.html">Events</a></div><div><a class="button" href="request.html">Request Form <span aria-hidden="true">↗</span></a></div></div></footer>
-  
+  <script>
+    (() => {
+      const target = new Date("2027-05-01T00:00:00+02:00").getTime();
+      const countdown = document.getElementById("event-countdown");
+      const fields = {
+        days: countdown.querySelector("[data-days]"),
+        hours: countdown.querySelector("[data-hours]"),
+        minutes: countdown.querySelector("[data-minutes]"),
+        seconds: countdown.querySelector("[data-seconds]")
+      };
+      const update = () => {
+        const remaining = Math.max(0, target - Date.now());
+        const totalSeconds = Math.floor(remaining / 1000);
+        fields.days.textContent = String(Math.floor(totalSeconds / 86400)).padStart(3, "0");
+        fields.hours.textContent = String(Math.floor(totalSeconds % 86400 / 3600)).padStart(2, "0");
+        fields.minutes.textContent = String(Math.floor(totalSeconds % 3600 / 60)).padStart(2, "0");
+        fields.seconds.textContent = String(totalSeconds % 60).padStart(2, "0");
+      };
+      update();
+      window.setInterval(update, 1000);
+    })();
+  </script>
 </body>
 </html>
